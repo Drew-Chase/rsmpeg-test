@@ -1,0 +1,15 @@
+[package]
+name = "rsmpeg-test"
+version = "0.1.0"
+edition = "2021"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rsmpeg = { version = "0.15.1+ffmpeg.7.0" }
+
+[package.metadata.vcpkg]
+dependencies = ["ffmpeg[vpx,x264]:x64-windows-static-md"]
+git = "https://github.com/microsoft/vcpkg"
+rev = "a00ea19" # Although it is possible to link to the master branch of vcpkg, it may be better to fix a specific revision in order to avoid unwanted breaking changes.
